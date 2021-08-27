@@ -26,6 +26,8 @@ namespace Repository {
         private void InitializeComponent() {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.btnInvokeDLabel = new System.Windows.Forms.Button();
+            this.btnTcpServerSimulator = new System.Windows.Forms.Button();
+            this.btnFormDialog = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnInvokeDLabel
@@ -38,11 +40,33 @@ namespace Repository {
             this.btnInvokeDLabel.UseVisualStyleBackColor = true;
             this.btnInvokeDLabel.Click += new System.EventHandler(this.btnInvokeDLabel_Click);
             // 
+            // btnTcpServerSimulator
+            // 
+            this.btnTcpServerSimulator.Location = new System.Drawing.Point(279, 12);
+            this.btnTcpServerSimulator.Name = "btnTcpServerSimulator";
+            this.btnTcpServerSimulator.Size = new System.Drawing.Size(200, 48);
+            this.btnTcpServerSimulator.TabIndex = 1;
+            this.btnTcpServerSimulator.Text = "Tcp服务端模拟器";
+            this.btnTcpServerSimulator.UseVisualStyleBackColor = true;
+            this.btnTcpServerSimulator.Click += new System.EventHandler(this.btnTcpServerSimulator_Click);
+            // 
+            // btnFormDialog
+            // 
+            this.btnFormDialog.Location = new System.Drawing.Point(616, 12);
+            this.btnFormDialog.Name = "btnFormDialog";
+            this.btnFormDialog.Size = new System.Drawing.Size(141, 48);
+            this.btnFormDialog.TabIndex = 2;
+            this.btnFormDialog.Text = "对话框";
+            this.btnFormDialog.UseVisualStyleBackColor = true;
+            this.btnFormDialog.Click += new System.EventHandler(this.btnFormDialog_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 750);
+            this.ClientSize = new System.Drawing.Size(911, 411);
+            this.Controls.Add(this.btnFormDialog);
+            this.Controls.Add(this.btnTcpServerSimulator);
             this.Controls.Add(this.btnInvokeDLabel);
             this.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -58,5 +82,7 @@ namespace Repository {
         #endregion
 
         private System.Windows.Forms.Button btnInvokeDLabel;
+        private System.Windows.Forms.Button btnTcpServerSimulator;
+        private System.Windows.Forms.Button btnFormDialog;
     }
 }

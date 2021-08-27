@@ -1,4 +1,6 @@
-﻿using Repository.DLabelExample;
+﻿using Repository.Dialog;
+using Repository.DLabelExample;
+using Repository.TcpIp;
 
 using System;
 using System.Windows.Forms;
@@ -6,7 +8,7 @@ using System.Windows.Forms;
 namespace Repository {
     public partial class FormMain : Form {
         #region -- module variable definition --
-        private string autoLoadForm = "invokeDLabel";
+        private readonly string autoLoadForm = "FormDialog";
         #endregion
         #region -- FormLoad --
         public FormMain() {
@@ -15,6 +17,14 @@ namespace Repository {
         private void FormMain_Load(object sender, EventArgs e) {
             if (autoLoadForm.Equals("invokeDLabel")) {
                 btnInvokeDLabel_Click(null, null);
+                Close();
+            }
+            else if (autoLoadForm.Equals("tcpServerSimulator")) {
+                btnTcpServerSimulator_Click(null, null);
+                Close();
+            }
+            else if (autoLoadForm.Equals("FormDialog")) {
+                btnFormDialog_Click(null, null);
                 Close();
             }
             else {
@@ -26,6 +36,13 @@ namespace Repository {
         #region -- Controls event --
         private void btnInvokeDLabel_Click(object sender, EventArgs e) {
             (new FormInvokeDLabel()).ShowDialog();
+        }
+        private void btnTcpServerSimulator_Click(object sender, EventArgs e) {
+            (new FormTcpServerSimulator()).ShowDialog();
+        }
+
+        private void btnFormDialog_Click(object sender, EventArgs e) {
+            new FormDialogTest().ShowDialog();
         }
         #endregion
     }
