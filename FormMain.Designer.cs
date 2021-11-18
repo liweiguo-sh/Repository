@@ -28,6 +28,7 @@ namespace Repository {
             this.btnInvokeDLabel = new System.Windows.Forms.Button();
             this.btnTcpServerSimulator = new System.Windows.Forms.Button();
             this.btnFormDialog = new System.Windows.Forms.Button();
+            this.btnComm = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnInvokeDLabel
@@ -60,11 +61,22 @@ namespace Repository {
             this.btnFormDialog.UseVisualStyleBackColor = true;
             this.btnFormDialog.Click += new System.EventHandler(this.btnFormDialog_Click);
             // 
+            // btnComm
+            // 
+            this.btnComm.Location = new System.Drawing.Point(279, 100);
+            this.btnComm.Name = "btnComm";
+            this.btnComm.Size = new System.Drawing.Size(200, 48);
+            this.btnComm.TabIndex = 3;
+            this.btnComm.Text = "串口通讯测试";
+            this.btnComm.UseVisualStyleBackColor = true;
+            this.btnComm.Click += new System.EventHandler(this.btnComm_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(911, 411);
+            this.Controls.Add(this.btnComm);
             this.Controls.Add(this.btnFormDialog);
             this.Controls.Add(this.btnTcpServerSimulator);
             this.Controls.Add(this.btnInvokeDLabel);
@@ -84,5 +96,6 @@ namespace Repository {
         private System.Windows.Forms.Button btnInvokeDLabel;
         private System.Windows.Forms.Button btnTcpServerSimulator;
         private System.Windows.Forms.Button btnFormDialog;
+        private System.Windows.Forms.Button btnComm;
     }
 }

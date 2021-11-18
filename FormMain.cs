@@ -1,4 +1,5 @@
-﻿using Repository.Dialog;
+﻿using Repository.Comm;
+using Repository.Dialog;
 using Repository.DLabelExample;
 using Repository.TcpIp;
 
@@ -8,7 +9,7 @@ using System.Windows.Forms;
 namespace Repository {
     public partial class FormMain : Form {
         #region -- module variable definition --
-        private readonly string autoLoadForm = "FormDialog";
+        private readonly string autoLoadForm = "FormComm";
         #endregion
         #region -- FormLoad --
         public FormMain() {
@@ -27,6 +28,10 @@ namespace Repository {
                 btnFormDialog_Click(null, null);
                 Close();
             }
+            else if (autoLoadForm.Equals("FormComm")) {
+                btnComm_Click(null, null);
+                Close();
+            }
             else {
 
             }
@@ -43,6 +48,10 @@ namespace Repository {
 
         private void btnFormDialog_Click(object sender, EventArgs e) {
             new FormDialogTest().ShowDialog();
+        }
+
+        private void btnComm_Click(object sender, EventArgs e) {
+            new FormComm().ShowDialog();
         }
         #endregion
     }

@@ -75,6 +75,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common\Config.cs" />
+    <Compile Include="Comm\FormComm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comm\FormComm.Designer.cs">
+      <DependentUpon>FormComm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dialog\FormDialogTest.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +117,9 @@
     <Compile Include="Util\UtilFile.cs" />
     <Compile Include="Util\UtilMessage.cs" />
     <Compile Include="Util\UtilString.cs" />
+    <EmbeddedResource Include="Comm\FormComm.resx">
+      <DependentUpon>FormComm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dialog\FormDialogTest.resx">
       <DependentUpon>FormDialogTest.cs</DependentUpon>
     </EmbeddedResource>
